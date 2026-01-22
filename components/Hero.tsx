@@ -41,7 +41,7 @@ export default function Hero() {
                     <div className="order-1 md:order-2 flex justify-center md:justify-end">
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center overflow-hidden border-4 border-white ring-1 ring-slate-100">
                             <Image
-                                src="/profile.jpg"
+                                src={`${process.env.BASE_PATH || ""}/profile.jpg`}
                                 alt="Seiya Watanabe"
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700"
