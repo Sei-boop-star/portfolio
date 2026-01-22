@@ -42,11 +42,18 @@
   }
 
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-lg border border-white/50 shadow-xl;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .section-title-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #0f172a, #475569);
   }
 
   .animate-fade-in-up {
