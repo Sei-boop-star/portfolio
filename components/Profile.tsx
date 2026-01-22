@@ -16,7 +16,7 @@ export default function Profile() {
                                 src={`${process.env.BASE_PATH || ""}/profile.jpg`}
                                 alt="Seiya Watanabe"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                             />
                         </div>
                         <span className="mt-8 text-xs font-bold text-slate-600 bg-slate-100 border border-slate-200 px-5 py-2 rounded-full tracking-wider uppercase">
