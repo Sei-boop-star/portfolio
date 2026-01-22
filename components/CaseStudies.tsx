@@ -1,4 +1,4 @@
-import { FileJson, MessageCircle, Sparkles } from "lucide-react";
+import { FileJson, MessageCircle, Sparkles, ShieldAlert } from "lucide-react";
 import Image from "next/image";
 
 export default function CaseStudies() {
@@ -10,35 +10,37 @@ export default function CaseStudies() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative inline-block">
-                        <span className="relative z-10">現場の「困った」を解決した実例</span>
+                        <span className="relative z-10">実例（結局どうラクになるか）</span>
                         <span className="absolute bottom-1 left-0 right-0 h-3 bg-yellow-100/80 -z-0 rotate-1"></span>
                     </h2>
-                    <p className="text-slate-600 font-medium mt-4">技術的な話ではなく、「結局どうなるのか」をご紹介します。</p>
+                    <p className="text-slate-600 font-medium mt-4">技術の話ではなく、「結局どうラクになるか」だけ載せます。</p>
                 </div>
 
                 <div className="space-y-12">
 
                     {/* Case A: Admin Automation */}
                     <CaseCard
-                        title="【事務の自動化】毎月5時間の「納品書転記」を、5分の「確認」へ。"
+                        title="【事務】納品書転記：5時間 → 確認だけへ"
                         icon={<FileJson className="h-6 w-6 text-white" />}
                         iconBg="bg-blue-600"
                     >
                         <ProblemSolution
-                            problem="大量の納品書を目視でExcelに入力。入力ミスと、単純作業のストレスが限界だった。"
-                            solution="スマホで撮影したPDFをAIが読み取り、自動で一覧表を作成。人は「最終確認」をするだけ。"
+                            problem="目視入力が多く、ミスと負担が積み上がる。"
+                            solution="一覧を自動で作成。人は最終確認だけ。"
+                            stopMechanism="読めない所は要確認に分けて止めます。"
                         />
                     </CaseCard>
 
                     {/* Case B: Knowledge Base (Updated) */}
                     <CaseCard
-                        title="【現場の知恵袋】スタッフが自ら相談し始める「AI知恵袋」"
+                        title="【自走】質問が減る 社内の知恵袋"
                         icon={<MessageCircle className="h-6 w-6 text-white" />}
                         iconBg="bg-emerald-600"
                     >
                         <ProblemSolution
-                            problem="「わからない」が口癖で、常に指示待ちの状態。マニュアルを作っても読まれず、管理者への質問が減らない。"
-                            solution="NotebookLMに会社の商品情報やストーリーを集約し、イラスト多めの「AI相談役」を作成。今ではスタッフから「これもAIで作れますか？」と能動的な提案が出るように。"
+                            problem="同じ質問が繰り返され、現場が止まりやすい。"
+                            solution="商品情報・ストーリー・判断基準をまとめ、スタッフがまず自分で確認できる形に。改善が現場から出る循環につながりました。"
+                            stopMechanism="迷うケースは確認につなぐ出し方にします。"
                         />
                         {/* Case Study Images (Mobile First) */}
                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -58,13 +60,14 @@ export default function CaseStudies() {
 
                     {/* Case C: SNS/Marketing (Dashboard Style) */}
                     <CaseCard
-                        title="【集客の加速】ブランドの質を守りながら、SNS投稿を量産。"
+                        title="【文章】説明文・返信文の 品質をそろえる"
                         icon={<Sparkles className="h-6 w-6 text-white" />}
                         iconBg="bg-rose-500"
                     >
                         <ProblemSolution
-                            problem="投稿頻度を上げたいが、アルバイトに任せるとお店の雰囲気に合わない文章になってしまう。"
-                            solution="箇条書きのメモから、お店の「こだわり」や「口調」を反映した投稿案をAIが複数提案。最後は人が選んで投稿するだけ。"
+                            problem="人によって文章がブレて、確認が増える。"
+                            solution="メモから複数案。最後は人が選ぶだけ。責めない／断定しすぎないも固定。文章の雰囲気をそろえます。"
+                            stopMechanism="強い断定は避け、**出口（次の一手）**を残します。"
                         />
                         <SystemDashboard />
                     </CaseCard>
@@ -93,18 +96,32 @@ function CaseCard({ title, icon, iconBg, children }: { title: string, icon: Reac
     );
 }
 
-function ProblemSolution({ problem, solution }: { problem: string, solution: string }) {
+function ProblemSolution({ problem, solution, stopMechanism }: { problem: string, solution: string, stopMechanism?: string }) {
     return (
-        <div className="space-y-4 bg-slate-50 p-6 rounded-2xl border border-slate-100/50">
-            <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
-                <span className="inline-block px-2.5 py-1 text-xs font-bold text-slate-500 bg-slate-200 rounded self-start whitespace-nowrap">Before</span>
-                <p className="text-slate-600 text-sm leading-relaxed">{problem}</p>
+        <div className="space-y-6 bg-slate-50 p-6 rounded-2xl border border-slate-100/50">
+            {/* Before / After */}
+            <div className="space-y-4">
+                <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
+                    <span className="inline-block px-2.5 py-1 text-xs font-bold text-slate-500 bg-slate-200 rounded self-start whitespace-nowrap">Before</span>
+                    <p className="text-slate-600 text-sm leading-relaxed">{problem}</p>
+                </div>
+                <div className="w-full h-px bg-slate-200/50 my-2"></div>
+                <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
+                    <span className="inline-block px-2.5 py-1 text-xs font-bold text-emerald-700 bg-emerald-100 rounded self-start whitespace-nowrap">After</span>
+                    <p className="text-slate-900 text-base font-bold leading-relaxed">{solution}</p>
+                </div>
             </div>
-            <div className="w-full h-px bg-slate-200/50 my-2"></div>
-            <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
-                <span className="inline-block px-2.5 py-1 text-xs font-bold text-emerald-700 bg-emerald-100 rounded self-start whitespace-nowrap">After</span>
-                <p className="text-slate-900 text-base font-bold leading-relaxed">{solution}</p>
-            </div>
+
+            {/* Stop Mechanism */}
+            {stopMechanism && (
+                <div className="mt-6 bg-yellow-50 rounded-lg p-4 border border-yellow-100 flex gap-4 items-start">
+                    <ShieldAlert className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+                    <div>
+                        <span className="block text-xs font-bold text-yellow-700 mb-1">止め方（要確認）</span>
+                        <p className="text-sm text-slate-700 font-medium leading-relaxed">{stopMechanism}</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
