@@ -2,24 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
+@layer base {
+  :root {
+    --background: 220 30% 98%;
+    --foreground: 222 47% 11%;
 
-  --primary: 221 83% 53%;
-  --primary-foreground: 210 40% 98%;
+    /* Primary: Deep Trusted Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
 
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+    /* Secondary: Slate for subtlety */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
 
-  --muted: 215 16% 47%;
-  --muted-foreground: 215 16% 47%;
+    /* Accents for "WOW" factor */
+    --accent: 217 91% 60%;
+    --accent-glow: 217 91% 60%;
 
-  --border: 214 32% 91%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --muted: 215 16% 90%;
+    --muted-foreground: 215 16% 47%;
+
+    --border: 214 32% 91%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-100 selection:text-indigo-900;
+    font-feature-settings: "palt" 1;
+    /* Proportional metrics for Japanese */
+  }
+
+  /* Subtle background pattern */
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  }
 }
 
-@layer base {
-  body {
-    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-lg border border-white/50 shadow-xl;
+  }
+
+  .section-title-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

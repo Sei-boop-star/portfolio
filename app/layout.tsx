@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_JP } from "next/font/google"; // Import Google Fonts
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// Configure fonts
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-noto-sans-jp",
+});
 
 export const metadata: Metadata = {
   title: "渡邊聖也 | 業務改善・生成AI活用パートナー",
@@ -16,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${notoSansJP.variable} font-sans`}>
+        {children}
+      </body>
     </html>
   );
 }

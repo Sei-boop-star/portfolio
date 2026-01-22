@@ -1,9 +1,4 @@
 import Link from "next/link";
-// Button component import removed as we use Link with utility classes
-
-// Actually, creating a reusable button is better.
-// Let's assume standard HTML button with classes for now to save file count, or make a ui/button.tsx
-// I will start broad.
 
 export default function Header() {
     const menuItems = [
@@ -13,9 +8,12 @@ export default function Header() {
     ];
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                <div className="font-bold text-lg tracking-tight text-slate-900">
+        <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+            {/* Glass Panel */}
+            <div className="absolute inset-0 bg-white/70 backdrop-blur-md border-b border-white/50 shadow-sm"></div>
+
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative z-10">
+                <div className="font-bold text-xl tracking-tight text-slate-900 font-sans">
                     Seiya Watanabe
                 </div>
 
@@ -24,7 +22,7 @@ export default function Header() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="text-sm font-medium text-slate-600 hover:text-[hsl(var(--primary))] transition-colors"
+                            className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors"
                         >
                             {item.label}
                         </Link>
@@ -32,10 +30,9 @@ export default function Header() {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    {/* Mobile Menu could go here, but keeping it simple for MVP */}
                     <Link
                         href="#contact"
-                        className="inline-flex h-10 items-center justify-center rounded-full bg-[hsl(var(--primary))] px-6 text-sm font-medium text-white shadow transition-colors hover:bg-[hsl(var(--primary))/90] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                        className="inline-flex h-9 items-center justify-center rounded-full bg-slate-900 px-5 text-sm font-bold text-white shadow-md transition-all hover:bg-indigo-600 hover:shadow-lg"
                     >
                         相談する
                     </Link>
