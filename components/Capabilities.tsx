@@ -6,11 +6,11 @@ export default function Capabilities() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 inline-block relative">
-                        私がお手伝いできること
+                        入力は「きれい」でなくて大丈夫です
                         <span className="absolute -bottom-2 inset-x-0 h-1 bg-slate-200/50 rounded-full"></span>
                     </h2>
                     <p className="mt-6 text-slate-600 font-medium">
-                        「きれいなデータ」は必要ありません。現場にあるものを、そのままお渡しください。
+                        現場にあるものから始めます。整理はこちらで行います。
                     </p>
                 </div>
 
@@ -22,11 +22,9 @@ export default function Capabilities() {
                             いただくもの（そのままでOK）
                         </span>
                         <ul className="space-y-4 pt-4">
-                            <ListItem text="手書きのメモ／ノート" />
-                            <ListItem text="口頭の指示（あとで文字にします）" />
-                            <ListItem text="古いPDF資料" />
-                            <ListItem text="社内の「いつもこうしてる」ルール" />
-                            <ListItem text="よくある質問・返信の例（あれば）" />
+                            <ListItem text="メモ／口頭の指示" />
+                            <ListItem text="古い資料（PDFなど）" />
+                            <ListItem text="よくある質問・返信（あれば）" />
                         </ul>
                     </div>
 
@@ -42,11 +40,10 @@ export default function Capabilities() {
                             お渡しするもの（現場が動ける形）
                         </span>
                         <ul className="space-y-4 pt-4">
-                            <ListItem text="迷いにくい手順（誰が／いつ／何を）" highlight />
+                            <ListItem text="迷わない手順（誰が／いつ）" highlight />
                             <ListItem text="返信のたたき台（確認ポイントつき）" highlight />
-                            <ListItem text="ミスを減らすチェックリスト" highlight />
-                            <ListItem text="「要確認」で止まる業務の流れ" highlight />
-                            <ListItem text="更新ルール（育てていける形）" highlight />
+                            <ListItem text="チェックリスト" highlight />
+                            <ListItem text="要確認で止まる流れ" highlight />
                         </ul>
                     </div>
                 </div>

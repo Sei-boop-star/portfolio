@@ -30,20 +30,20 @@ export default function Profile() {
                         </h2>
                         <p className="text-slate-800 font-bold mb-10 text-xl leading-relaxed border-l-4 border-slate-900 pl-4 py-1">
                             「ITコンサル」ではありません。<br />
-                            現場の熱量を、確かな“回る形”につなぐ翻訳者です。
+                            現場の言葉を、回る形につなぐ翻訳者です。
                         </p>
 
                         <div className="space-y-8 text-slate-600 leading-loose text-justify md:text-left font-medium">
                             <p>
-                                中小企業の現場側で、接客・運営・教育・トラブル対応の最前線に立ちながら、業務の整備と改善を進めてきました。
+                                中小企業の現場側で、接客・運営・教育の最前線に立ちながら改善を回しています。
                             </p>
                             <p>
-                                前職では大手メーカーで12年間、品質管理に従事。曖昧な情報を「誰でも同じ判断ができる形」に整える仕事を続けてきました。
+                                前職は品質管理12年。曖昧さを「同じ判断ができる形」に整える仕事を続けてきました。
                             </p>
                             <div className="bg-slate-50 p-6 rounded-none border-l-2 border-slate-300 text-sm leading-relaxed">
                                 <span className="font-bold block mb-2 text-slate-900 text-base">大切にしていること</span>
-                                「きれいな仕組み」より、「現場が使い倒せる道具」を。<br />
-                                負担が減るだけでなく、確認ポイントが見える形を一緒に作ります。
+                                「きれい」より「使える」。<br />
+                                確認ポイントが残る形を一緒に作ります。
                             </div>
                         </div>
                     </div>

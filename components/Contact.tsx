@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <section id="contact" className="py-24 bg-white border-t border-slate-200">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight">
                     お問い合わせ
                 </h2>
 
@@ -13,33 +13,25 @@ export default function Contact() {
                     <div className="absolute top-0 left-0 w-1 h-full bg-slate-300"></div>
                     <p className="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
                         <span className="text-xl">🤔</span>
-                        まずは状況だけで大丈夫です（こういう方へ）
+                        状況だけで大丈夫です。箇条書きでOKです。
                     </p>
                     <ul className="text-slate-600 space-y-3 text-sm font-medium">
                         <li className="flex items-start gap-3">
                             <span className="text-emerald-500 mt-1">●</span>
-                            問い合わせ返信を毎回作るのがつらい
+                            返信や説明を毎回作って消耗している
                         </li>
                         <li className="flex items-start gap-3">
                             <span className="text-emerald-500 mt-1">●</span>
-                            同じ質問が何度も来て、現場が止まる
+                            同じ質問が繰り返されて現場が止まる
                         </li>
                         <li className="flex items-start gap-3">
                             <span className="text-emerald-500 mt-1">●</span>
-                            日報・引き継ぎが続かず、毎回やり直しになる
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <span className="text-emerald-500 mt-1">●</span>
-                            マニュアルを作る時間がない
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <span className="text-emerald-500 mt-1">●</span>
-                            口頭指示が伝わらず、聞き直しが増えている
+                            引き継ぎや手順が積み上がらない
                         </li>
                     </ul>
                     <p className="mt-6 text-xs text-slate-400 border-t border-slate-200 pt-4 leading-relaxed">
-                        ※箇条書きでOKです。まとまっていなくて大丈夫です。<br />
-                        無理な売り込みはしません。まずは雑談ベースで状況を聞かせてください。
+                        ※まとまっていなくて大丈夫です。<br />
+                        まずは雑談ベースで聞かせてください。
                     </p>
                 </div>
 
@@ -54,6 +46,7 @@ export default function Contact() {
                 </Link>
 
                 <p className="mt-8 text-sm text-slate-500">
+                    無理な売り込みはいたしません。<br />
                     Googleフォームへ移動します。
                 </p>
             </div>
