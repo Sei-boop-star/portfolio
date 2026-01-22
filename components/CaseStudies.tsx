@@ -126,7 +126,7 @@ function SystemDashboard() {
 
                 {/* Logic Flow */}
                 <div className="space-y-2">
-                    <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">>>> SYSTEM_LOGIC</p>
+                    <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">&gt;&gt;&gt; SYSTEM_LOGIC</p>
 
                     <div className="bg-white border border-slate-200 rounded p-4 shadow-sm space-y-3">
                         <div className="flex items-start gap-4">
