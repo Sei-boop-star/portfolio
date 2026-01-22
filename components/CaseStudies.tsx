@@ -39,6 +39,18 @@ export default function CaseStudies() {
                             problem="「わからない」が口癖で、常に指示待ちの状態。マニュアルを作っても読まれず、管理者への質問が減らない。"
                             solution="NotebookLMに会社の商品情報やストーリーを集約し、イラスト多めの「AI相談役」を作成。今ではスタッフから「これもAIで作れますか？」と能動的な提案が出るように。"
                         />
+                        {/* Case Study Images (Mobile First) */}
+                        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {[1, 2, 3, 4].map((num) => (
+                                <div key={num} className="relative aspect-[16/9] w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+                                    <img
+                                        src={`${process.env.BASE_PATH || ""}/case-slide-${num}.jpg`}
+                                        alt={`AI知恵袋スライド ${num}`}
+                                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </CaseCard>
 
                     {/* Case C: SNS/Marketing */}
