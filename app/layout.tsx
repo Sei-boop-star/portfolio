@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "渡邊聖也 | 業務改善・生成AI活用パートナー",
-  description: "現場の曖昧さを“回る業務”に翻訳し、生成AIで処理速度を上げます。中小企業・個人事業主向けの実践的DX支援。",
+  description: "「社長の頭の中」を、現場が迷わず動ける“仕組み”に変える。口頭指示・メモ・暗黙の判断を、手順・チェック・文章に落とし、運用を回転させます。",
 };
 
 export default function RootLayout({

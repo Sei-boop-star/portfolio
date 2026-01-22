@@ -12,16 +12,16 @@ export default function Hero() {
                     </div>
 
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-6 text-slate-900">
-                        現場の曖昧さを
+                        「社長の頭の中」を、
                         <br className="hidden md:block" />
-                        “回る業務”に翻訳し、
+                        現場が迷わず動ける
                         <br />
-                        <span className="text-[hsl(var(--primary))]">生成AI</span>で処理速度を上げます。
+                        <span className="text-[hsl(var(--primary))]">“仕組み”</span>に変える。
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                        手作業の転記や整理を自動化し、本業に集中できる環境を作ります。<br className="hidden md:block" />
-                        AIの出力は必ず人が確認する「安心設計」で運用します。
+                        口頭指示・メモ・暗黙の判断を、手順・チェック・文章に落とし、生成AIで回転数を上げます。<br />
+                        IT用語は使いません。最終確認は人が行う前提で、事故が起きない運用まで設計します。
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
