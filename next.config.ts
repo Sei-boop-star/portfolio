@@ -1,12 +1,24 @@
 import type { NextConfig } from "next";
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+
+let assetPrefix = "";
+let basePath = "";
+
+if (isGithubActions) {
+  // github pages repo name
+  const repo = "portfolio";
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
+}
+
 const nextConfig: NextConfig = {
-  output: "export",  // Static HTML export for GitHub Pages
+  output: "export",
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  basePath: "/portfolio", // Repository name matches the URL path
-  assetPrefix: "/portfolio/", // Ensure assets are loaded from the correct path
+  basePath: basePath,
+  assetPrefix: assetPrefix,
 };
 
 export default nextConfig;

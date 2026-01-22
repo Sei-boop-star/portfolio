@@ -28,12 +28,6 @@
     --border: 214 32% 91%;
   }
 
-  body {
-    @apply bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-100 selection:text-indigo-900;
-    font-feature-settings: "palt" 1;
-    /* Proportional metrics for Japanese */
-  }
-
   /* Subtle background pattern */
   .bg-grid-pattern {
     background-size: 40px 40px;
