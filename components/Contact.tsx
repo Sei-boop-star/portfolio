@@ -9,22 +9,29 @@ export default function Contact() {
                     お問い合わせ
                 </h2>
 
-                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10 text-left max-w-lg mx-auto">
-                    <p className="text-xs font-bold text-slate-500 mb-2">ご相談の例</p>
-                    <ul className="text-slate-700 space-y-2 text-sm">
-                        <li className="flex items-start gap-2">
-                            <span className="text-emerald-500">●</span>
-                            納品書の入力を自動化したい
+                <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 mb-12 text-left max-w-xl mx-auto relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-slate-300"></div>
+                    <p className="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span className="text-xl">🤔</span>
+                        何を書けばいいか迷っている方へ
+                    </p>
+                    <ul className="text-slate-600 space-y-3 text-sm font-medium">
+                        <li className="flex items-start gap-3">
+                            <span className="text-emerald-500 mt-1">●</span>
+                            「スタッフに何度も同じことを聞かれるのをやめたい」
                         </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-emerald-500">●</span>
-                            生成AIを使って古いマニュアルを整理したい
+                        <li className="flex items-start gap-3">
+                            <span className="text-emerald-500 mt-1">●</span>
+                            「自分の『こだわり』を、AIを使って正しく伝えたい」
                         </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-emerald-500">●</span>
-                            現場がアナログすぎて何からしていいか分からない
+                        <li className="flex items-start gap-3">
+                            <span className="text-emerald-500 mt-1">●</span>
+                            「とにかく今の忙しさを、AIという道具で少しでも軽くしたい」
                         </li>
                     </ul>
+                    <p className="mt-6 text-xs text-slate-400 border-t border-slate-200 pt-4">
+                        ※まとまっていなくて大丈夫です。そのままお書きください。
+                    </p>
                 </div>
 
                 <Link

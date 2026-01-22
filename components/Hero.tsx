@@ -38,13 +38,16 @@ export default function Hero() {
                     </div>
 
                     {/* Photo Column */}
-                    <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center overflow-hidden border-4 border-white ring-1 ring-slate-100">
+                    <div className="order-1 md:order-2 flex justify-center md:justify-end relative">
+                        {/* Decorative blob behind photo */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-slate-200 to-transparent rounded-full opacity-50 blur-3xl -z-10"></div>
+
+                        <div className="relative w-80 h-96 md:w-96 md:h-[500px] rounded-2xl bg-slate-100 shadow-2xl flex items-center justify-center overflow-hidden border-8 border-white rotate-3 hover:rotate-0 transition-transform duration-700">
                             <Image
                                 src={`${process.env.BASE_PATH || ""}/profile.jpg`}
                                 alt="Seiya Watanabe"
                                 fill
-                                className="object-cover hover:scale-105 transition-transform duration-700"
+                                className="object-cover"
                                 priority
                             />
                         </div>

@@ -29,15 +29,15 @@ export default function CaseStudies() {
                         />
                     </CaseCard>
 
-                    {/* Case B: Knowledge Base */}
+                    {/* Case B: Knowledge Base (Updated) */}
                     <CaseCard
-                        title="【現場の知恵袋】「聞かないと動けない」をなくす、AI手順書。"
+                        title="【現場の知恵袋】スタッフが自ら相談し始める「AI知恵袋」"
                         icon={<MessageCircle className="h-6 w-6 text-white" />}
                         iconBg="bg-emerald-600"
                     >
                         <ProblemSolution
-                            problem="熟練スタッフに質問が集中。「あの人に聞かないと分からない」状態で、休まれると現場が止まる。"
-                            solution="バラバラのメモや古いマニュアルをAIに集約。スタッフがスマホで質問すれば、即座に回答が返ってくる環境を構築。"
+                            problem="「わからない」が口癖で、常に指示待ちの状態。マニュアルを作っても読まれず、管理者への質問が減らない。"
+                            solution="NotebookLMに会社の商品情報やストーリーを集約し、イラスト多めの「AI相談役」を作成。今ではスタッフから「これもAIで作れますか？」と能動的な提案が出るように。"
                         />
                     </CaseCard>
 
