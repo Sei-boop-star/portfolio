@@ -53,7 +53,7 @@ export default function CaseStudies() {
                         </div>
                     </CaseCard>
 
-                    {/* Case C: SNS/Marketing */}
+                    {/* Case C: SNS/Marketing (Dashboard Style) */}
                     <CaseCard
                         title="【集客の加速】ブランドの質を守りながら、SNS投稿を量産。"
                         icon={<Sparkles className="h-6 w-6 text-white" />}
@@ -63,6 +63,7 @@ export default function CaseStudies() {
                             problem="投稿頻度を上げたいが、アルバイトに任せるとお店の雰囲気に合わない文章になってしまう。"
                             solution="箇条書きのメモから、お店の「こだわり」や「口調」を反映した投稿案をAIが複数提案。最後は人が選んで投稿するだけ。"
                         />
+                        <SystemDashboard />
                     </CaseCard>
 
                 </div>
@@ -100,6 +101,73 @@ function ProblemSolution({ problem, solution }: { problem: string, solution: str
             <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
                 <span className="inline-block px-2.5 py-1 text-xs font-bold text-emerald-700 bg-emerald-100 rounded self-start whitespace-nowrap">After</span>
                 <p className="text-slate-900 text-base font-bold leading-relaxed">{solution}</p>
+            </div>
+        </div>
+    );
+}
+
+function SystemDashboard() {
+    return (
+        <div className="mt-8 border border-slate-200 rounded-lg overflow-hidden font-mono text-sm bg-slate-50 relative">
+            {/* Grid Background */}
+            <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)', backgroundSize: '20px 20px', opacity: 0.5 }}></div>
+
+            <div className="relative p-6 space-y-6">
+
+                {/* Header */}
+                <div className="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full bg-slate-300"></div>
+                        <div className="w-3 h-3 rounded-full bg-slate-300"></div>
+                        <span className="text-slate-500 text-xs font-bold ml-2">AI_ENGINEERING_DASHBOARD</span>
+                    </div>
+                    <div className="px-2 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-bold rounded uppercase tracking-wider">Active</div>
+                </div>
+
+                {/* Logic Flow */}
+                <div className="space-y-2">
+                    <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">>>> SYSTEM_LOGIC</p>
+
+                    <div className="bg-white border border-slate-200 rounded p-4 shadow-sm space-y-3">
+                        <div className="flex items-start gap-4">
+                            <span className="text-rose-500 font-bold shrink-0">INPUT :</span>
+                            <span className="text-slate-600">箇条書きのメモ（新商品の特徴、価格、ターゲット）</span>
+                        </div>
+
+                        {/* Logic Block */}
+                        <div className="pl-4 border-l-2 border-slate-200 py-2 space-y-2 my-2 bg-slate-50/50 rounded-r">
+                            <div className="flex items-center gap-2">
+                                <span className="text-blue-600 font-bold text-xs">▼ PROCESS:</span>
+                            </div>
+                            <div className="grid gap-2 text-xs md:text-sm pl-4">
+                                <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+                                    <span className="text-slate-400 font-bold shrink-0">TONE_CONFIG:</span>
+                                    <span className="text-slate-700 bg-white border border-slate-200 px-2 py-1 rounded">
+                                        トーン：社長の明るさ+10%
+                                    </span>
+                                </div>
+                                <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+                                    <span className="text-slate-400 font-bold shrink-0">SAFETY_FILTER:</span>
+                                    <span className="text-red-600 bg-red-50 border border-red-100 px-2 py-1 rounded">
+                                        検品NG：嘲笑、ため息、人格否定
+                                    </span>
+                                </div>
+                                <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+                                    <span className="text-slate-400 font-bold shrink-0">REQUIREMENT:</span>
+                                    <span className="text-emerald-700 bg-emerald-50 border border-emerald-100 px-2 py-1 rounded">
+                                        必須要件：必ず『出口（解決策）』を提示する
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
+                            <span className="text-emerald-500 font-bold shrink-0">OUTPUT:</span>
+                            <span className="text-slate-900 font-bold">「お店のこだわり」を反映した、高品質なSNS投稿文</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
