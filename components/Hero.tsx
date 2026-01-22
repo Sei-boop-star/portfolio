@@ -9,7 +9,7 @@ export default function Hero() {
                 <div className="grid md:grid-cols-[1.1fr,0.9fr] gap-12 md:gap-20 items-center mb-20">
 
                     {/* Text Column */}
-                    <div className="space-y-10 text-center md:text-left order-2 md:order-1">
+                    <div className="space-y-10 text-center md:text-left">
                         <div className="space-y-8">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug tracking-tight text-slate-900">
                                 「社長の頭の中」を、<br />
@@ -38,7 +38,7 @@ export default function Hero() {
                     </div>
 
                     {/* Photo Column */}
-                    <div className="order-1 md:order-2 flex justify-center md:justify-end relative">
+                    <div className="flex justify-center md:justify-end relative">
                         {/* Decorative blob behind photo */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-slate-200 to-transparent rounded-full opacity-50 blur-3xl -z-10"></div>
 
@@ -47,7 +47,7 @@ export default function Hero() {
                                 src={`${process.env.BASE_PATH || ""}/profile.jpg`}
                                 alt="Seiya Watanabe"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>
