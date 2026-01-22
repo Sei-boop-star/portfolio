@@ -26,15 +26,7 @@ export default function Hero() {
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start pt-2">
-                            <Link
-                                href="#contact"
-                                className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-lg bg-slate-800 px-10 text-base font-bold text-white shadow-[0_4px_14px_0_rgba(30,41,59,0.39)] transition-all hover:bg-slate-700 hover:-translate-y-0.5"
-                            >
-                                まずは相談する
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </Link>
-                        </div>
+
                     </div>
 
                     {/* Photo Column */}

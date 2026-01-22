@@ -30,14 +30,7 @@ export default function Header() {
                     ))}
                 </nav>
 
-                <div className="flex items-center gap-4">
-                    <Link
-                        href="#contact"
-                        className="inline-flex h-10 items-center justify-center rounded bg-slate-800 px-5 text-sm font-bold text-white shadow-sm transition-all hover:bg-slate-700"
-                    >
-                        相談する
-                    </Link>
-                </div>
+
             </div>
         </header>
     );
