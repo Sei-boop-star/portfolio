@@ -1,108 +1,93 @@
-import { ArrowRight, CheckCircle2, FileText, Upload } from "lucide-react";
+import { FileJson, MessageCircle, Sparkles } from "lucide-react";
 
 export default function CaseStudies() {
     return (
-        <section id="cases" className="py-32 bg-slate-50">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-20">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                        「現場がどう変わるか」
+        <section id="cases" className="py-24 bg-slate-50/50 relative">
+            {/* Simple accent background */}
+            <div className="absolute top-0 inset-x-0 h-px bg-slate-200/50"></div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative inline-block">
+                        <span className="relative z-10">現場の「困った」を解決した実例</span>
+                        <span className="absolute bottom-1 left-0 right-0 h-3 bg-yellow-100/80 -z-0 rotate-1"></span>
                     </h2>
-                    <p className="text-slate-600 font-medium">代表的な2つの改善事例です。</p>
+                    <p className="text-slate-600 font-medium mt-4">技術的な話ではなく、「結局どうなるのか」をご紹介します。</p>
                 </div>
 
-                <div className="space-y-16">
-                    {/* Case 1: 納品書 */}
+                <div className="space-y-12">
+
+                    {/* Case A: Admin Automation */}
                     <CaseCard
-                        badge="経理・事務"
-                        title="納品書PDF抽出の自動化"
-                        beforeText="毎月100件のPDFを目視確認。ミスがあれば修正に1時間、心理的負担も大。"
-                        afterText="AIが項目を自動転記し、人は「最終確認ボタン」を押すだけ。ミスゼロへ。"
-                        metrics="作業時間 80% 削減"
+                        title="【事務の自動化】毎月5時間の「納品書転記」を、5分の「確認」へ。"
+                        icon={<FileJson className="h-6 w-6 text-white" />}
+                        iconBg="bg-blue-600"
                     >
-                        {/* Visual representation: PDF -> Excel */}
-                        <div className="flex items-center justify-center gap-4 text-slate-400 py-8 bg-white rounded-lg border border-slate-200">
-                            <div className="text-center">
-                                <FileText className="h-10 w-10 mx-auto text-slate-300 mb-2" />
-                                <span className="text-xs font-bold">PDF</span>
-                            </div>
-                            <ArrowRight className="h-6 w-6 text-emerald-500" />
-                            <div className="text-center">
-                                <Upload className="h-10 w-10 mx-auto text-emerald-600 mb-2" />
-                                <span className="text-xs font-bold text-slate-900">自動入力</span>
-                            </div>
-                        </div>
+                        <ProblemSolution
+                            problem="大量の納品書を目視でExcelに入力。入力ミスと、単純作業のストレスが限界だった。"
+                            solution="スマホで撮影したPDFをAIが読み取り、自動で一覧表を作成。人は「最終確認」をするだけ。"
+                        />
                     </CaseCard>
 
-                    {/* Case 2: AI知恵袋 */}
+                    {/* Case B: Knowledge Base */}
                     <CaseCard
-                        badge="社内標準化"
-                        title="「あの人に聞かないと分からない」の解消"
-                        beforeText="熟練スタッフに質問が集中。退職すると業務が回らなくなるリスク。"
-                        afterText="過去のチャット・日報をAIに学習させ、24時間即答する「社内知恵袋」を構築。"
-                        metrics="新人教育コスト 50% 減"
+                        title="【現場の知恵袋】「聞かないと動けない」をなくす、AI手順書。"
+                        icon={<MessageCircle className="h-6 w-6 text-white" />}
+                        iconBg="bg-emerald-600"
                     >
-                        {/* Visual representation: Chat bubbles */}
-                        <div className="p-6 bg-white rounded-lg border border-slate-200 space-y-3">
-                            <div className="flex gap-3 justify-end">
-                                <div className="bg-emerald-100 text-emerald-900 text-xs p-2 rounded-lg rounded-tr-none">
-                                    このエラーの対応方法は？
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <div className="bg-slate-100 text-slate-800 text-xs p-3 rounded-lg rounded-tl-none border border-slate-200 w-full">
-                                    <span className="font-bold block mb-1">AIアシスタント</span>
-                                    マニュアルP.12の手順に従ってください。それでも直らない場合は...
-                                </div>
-                            </div>
-                        </div>
+                        <ProblemSolution
+                            problem="熟練スタッフに質問が集中。「あの人に聞かないと分からない」状態で、休まれると現場が止まる。"
+                            solution="バラバラのメモや古いマニュアルをAIに集約。スタッフがスマホで質問すれば、即座に回答が返ってくる環境を構築。"
+                        />
                     </CaseCard>
+
+                    {/* Case C: SNS/Marketing */}
+                    <CaseCard
+                        title="【集客の加速】ブランドの質を守りながら、SNS投稿を量産。"
+                        icon={<Sparkles className="h-6 w-6 text-white" />}
+                        iconBg="bg-rose-500"
+                    >
+                        <ProblemSolution
+                            problem="投稿頻度を上げたいが、アルバイトに任せるとお店の雰囲気に合わない文章になってしまう。"
+                            solution="箇条書きのメモから、お店の「こだわり」や「口調」を反映した投稿案をAIが複数提案。最後は人が選んで投稿するだけ。"
+                        />
+                    </CaseCard>
+
                 </div>
-
             </div>
         </section>
     );
 }
 
-function CaseCard({ badge, title, beforeText, afterText, metrics, children }: { badge: string, title: string, beforeText: string, afterText: string, metrics: string, children: React.ReactNode }) {
+function CaseCard({ title, icon, iconBg, children }: { title: string, icon: React.ReactNode, iconBg: string, children: React.ReactNode }) {
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden md:grid md:grid-cols-[1.2fr,0.8fr]">
-            <div className="p-8 md:p-12">
-                <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded mb-4">
-                    {badge}
-                </span>
-                <h3 className="text-2xl font-bold text-slate-900 mb-8">{title}</h3>
-
-                <div className="space-y-6">
-                    <div>
-                        <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Before</span>
-                        <p className="text-slate-600 leading-relaxed text-sm bg-slate-50 p-3 rounded border border-slate-100">
-                            {beforeText}
-                        </p>
+        <div className="bg-white rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ring-1 ring-slate-900/5 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div className="p-6 md:p-10">
+                <div className="flex items-start gap-5 mb-8">
+                    <div className={`shrink-0 w-14 h-14 rounded-2xl ${iconBg} flex items-center justify-center shadow-lg shadow-slate-200 ring-4 ring-white`}>
+                        {icon}
                     </div>
-                    <div className="relative">
-                        <div className="absolute -left-6 top-1/2 -translate-y-1/2 md:hidden">
-                            <ArrowRight className="h-5 w-5 text-emerald-500 rotate-90 mx-auto" />
-                        </div>
-                        <span className="block text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">After</span>
-                        <p className="text-slate-900 font-bold leading-relaxed text-lg">
-                            {afterText}
-                        </p>
-                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 leading-snug pt-1">
+                        {title}
+                    </h3>
                 </div>
-
-                <div className="mt-8 pt-6 border-t border-slate-100">
-                    <div className="flex items-center gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-emerald-500" />
-                        <span className="font-bold text-slate-900">{metrics}</span>
-                    </div>
-                </div>
+                {children}
             </div>
+        </div>
+    );
+}
 
-            <div className="bg-slate-50 border-t md:border-t-0 md:border-l border-slate-100 flex items-center justify-center p-8">
-                <div className="w-full max-w-xs">
-                    {children}
-                </div>
+function ProblemSolution({ problem, solution }: { problem: string, solution: string }) {
+    return (
+        <div className="space-y-4 bg-slate-50 p-6 rounded-2xl border border-slate-100/50">
+            <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
+                <span className="inline-block px-2.5 py-1 text-xs font-bold text-slate-500 bg-slate-200 rounded self-start whitespace-nowrap">Before</span>
+                <p className="text-slate-600 text-sm leading-relaxed">{problem}</p>
+            </div>
+            <div className="w-full h-px bg-slate-200/50 my-2"></div>
+            <div className="grid md:grid-cols-[auto,1fr] gap-2 md:gap-4">
+                <span className="inline-block px-2.5 py-1 text-xs font-bold text-emerald-700 bg-emerald-100 rounded self-start whitespace-nowrap">After</span>
+                <p className="text-slate-900 text-base font-bold leading-relaxed">{solution}</p>
             </div>
         </div>
     );

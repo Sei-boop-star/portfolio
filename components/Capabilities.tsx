@@ -1,63 +1,52 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 export default function Capabilities() {
     return (
-        <section id="capabilities" className="py-24 bg-slate-900 text-white relative overflow-hidden">
-            {/* Background Ambience */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section id="capabilities" className="py-24 bg-white/50 border-b border-slate-200/50">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <span className="text-indigo-400 font-bold tracking-widest uppercase text-xs mb-3 block">Service</span>
-                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 inline-block">
-                        ご依頼のイメージ
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 inline-block relative">
+                        私がお手伝いできること
+                        <span className="absolute -bottom-2 inset-x-0 h-1 bg-slate-200/50 rounded-full"></span>
                     </h2>
-                    <p className="mt-4 text-slate-400">「何を渡せば、何が返ってくるのか」の例です。</p>
-                </div>
-
-                <div className="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-center max-w-4xl mx-auto">
-
-                    {/* Input Concept */}
-                    <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl transform transition hover:scale-105">
-                        <div className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Input</div>
-                        <h3 className="text-xl font-bold text-white mb-6">現状そのまま</h3>
-                        <ul className="space-y-3">
-                            <ListItem text="大量のPDF / 書類" />
-                            <ListItem text="ぐちゃぐちゃのメモ" />
-                            <ListItem text="口頭での指示・録音" />
-                            <ListItem text="社内ルール / 慣習" />
-                        </ul>
-                    </div>
-
-                    {/* Process Flow */}
-                    <div className="flex flex-col items-center justify-center p-4 text-slate-500 gap-2">
-                        <div className="h-12 w-[1px] bg-slate-700 md:hidden"></div>
-                        <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center">
-                            <ArrowRight className="text-indigo-400 h-5 w-5 rotate-90 md:rotate-0" />
-                        </div>
-                        <span className="text-[10px] font-mono tracking-widest uppercase">Processing</span>
-                        <div className="h-12 w-[1px] bg-slate-700 md:hidden"></div>
-                    </div>
-
-                    {/* Output Concept */}
-                    <div className="bg-gradient-to-br from-indigo-900/50 to-slate-800/50 backdrop-blur border border-indigo-500/30 p-8 rounded-2xl transform transition hover:scale-105 shadow-2xl shadow-indigo-500/10">
-                        <div className="text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4">Output</div>
-                        <h3 className="text-xl font-bold text-white mb-6">整理された形式</h3>
-                        <ul className="space-y-3">
-                            <ListItem text="標準化された手順書" highlight />
-                            <ListItem text="整形済みデータシート" highlight />
-                            <ListItem text="自動返信の下書き案" highlight />
-                            <ListItem text="チェックリスト" highlight />
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div className="mt-16 text-center">
-                    <p className="inline-block px-4 py-2 bg-slate-800/80 rounded-lg text-xs text-slate-400 border border-slate-700">
-                        <span className="text-red-400 font-bold mr-2">対象外</span>
-                        24時間監視が必要なインフラ構築 / 大規模基幹システムのフルリプレイス
+                    <p className="mt-6 text-slate-600 font-medium">
+                        「きれいなデータ」は必要ありません。現場にあるものを、そのままお渡しください。
                     </p>
+                </div>
+
+                <div className="grid md:grid-cols-[1fr,auto,1fr] gap-8 items-center">
+
+                    {/* Input */}
+                    <div className="bg-white p-8 rounded-2xl relative shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ring-1 ring-slate-900/5">
+                        <span className="absolute -top-3 left-6 px-4 py-1.5 bg-slate-700 text-white text-xs font-bold rounded shadow-lg shadow-slate-200 tracking-wider">
+                            入力（現状）
+                        </span>
+                        <ul className="space-y-4 pt-4">
+                            <ListItem text="手書きのメモ・ノート" />
+                            <ListItem text="口頭での指示" />
+                            <ListItem text="古いPDF資料" />
+                            <ListItem text="社内の「暗黙のルール」" />
+                        </ul>
+                    </div>
+
+                    {/* Arrow (Mobile down, Desktop right) */}
+                    <div className="flex justify-center text-slate-300 py-4 md:py-0">
+                        <ArrowDown className="text-slate-400 h-8 w-8 md:hidden animate-pulse" />
+                        <ArrowRight className="text-slate-400 h-8 w-8 hidden md:block animate-pulse" />
+                    </div>
+
+                    {/* Output */}
+                    <div className="bg-white p-8 rounded-2xl relative shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ring-1 ring-emerald-900/5">
+                        <span className="absolute -top-3 left-6 px-4 py-1.5 bg-emerald-600 text-white text-xs font-bold rounded shadow-lg shadow-emerald-200 tracking-wider">
+                            出力（成果物）
+                        </span>
+                        <ul className="space-y-4 pt-4">
+                            <ListItem text="現場が動ける手順書" highlight />
+                            <ListItem text="即戦力の返信案" highlight />
+                            <ListItem text="ミスを防ぐチェックリスト" highlight />
+                            <ListItem text="自動化された業務フロー" highlight />
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -66,8 +55,8 @@ export default function Capabilities() {
 
 function ListItem({ text, highlight = false }: { text: string, highlight?: boolean }) {
     return (
-        <li className={`flex items-center gap-3 text-sm ${highlight ? "text-white font-medium" : "text-slate-300"}`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${highlight ? "bg-indigo-400" : "bg-slate-600"}`}></span>
+        <li className={`flex items-center gap-3 text-sm font-bold ${highlight ? "text-slate-800" : "text-slate-600"}`}>
+            <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${highlight ? "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]" : "bg-slate-300"}`}></span>
             {text}
         </li>
     );

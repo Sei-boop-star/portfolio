@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google"; // Import Google Fonts
+import { Noto_Sans_JP } from "next/font/google"; // Prioritize Japanese font
 import "./globals.css";
 
-// Configure fonts
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -11,8 +9,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "渡邊聖也 | 業務改善・生成AI活用パートナー",
-  description: "「社長の頭の中」を、現場が迷わず動ける“仕組み”に変える。口頭指示・メモ・暗黙の判断を、手順・チェック・文章に落とし、運用を回転させます。",
+  title: "渡邊 聖也 | 現場のための業務改善パートナー",
+  description: "「社長の頭の中」を、現場が迷わず動ける“仕組み”に変える。12年の品質管理経験で、実務に耐えるAI実装を設計します。",
 };
 
 export default function RootLayout({
@@ -22,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className={`${inter.variable} ${notoSansJP.variable} font-sans bg-slate-50 text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900`}>
+      <body className={`${notoSansJP.className} font-sans bg-background text-foreground antialiased selection:bg-gray-200 selection:text-black`}>
         {children}
       </body>
     </html>
