@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className={`${inter.variable} ${notoSansJP.variable} font-sans bg-slate-50 text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-900`}>
+      <body className={`${inter.variable} ${notoSansJP.variable} font-sans bg-slate-50 text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900`}>
         {children}
       </body>
     </html>

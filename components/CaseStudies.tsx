@@ -1,120 +1,62 @@
-import { FileText, ArrowRight, Table } from "lucide-react";
+import { ArrowRight, CheckCircle2, FileText, Upload } from "lucide-react";
 
 export default function CaseStudies() {
     return (
-        <section id="cases" className="py-24 bg-white relative">
-            {/* Section Header */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-                <span className="text-indigo-600 font-bold tracking-widest uppercase text-xs mb-3 block">Works</span>
-                <h2 className="text-3xl md:text-4xl font-bold section-title-gradient inline-block">代表事例</h2>
-                <p className="mt-4 text-slate-500">「実際にどう変わるのか」のビフォーアフターです。</p>
-            </div>
-
+        <section id="cases" className="py-32 bg-slate-50">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                {/* Featured Case Card */}
-                <div className="group relative bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-2xl shadow-slate-200/50 mb-20 transition-all hover:shadow-3xl hover:-translate-y-1">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 to-blue-500"></div>
-
-                    <div className="grid md:grid-cols-2">
-
-                        {/* Content Side */}
-                        <div className="p-8 md:p-12 flex flex-col justify-center">
-                            <div className="inline-flex items-center gap-2 mb-6">
-                                <span className="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-100">PICK UP</span>
-                                <span className="text-xs text-slate-400 font-medium">経理業務DX</span>
-                            </div>
-
-                            <h3 className="text-2xl font-bold text-slate-900 leading-snug mb-6">
-                                納品書PDF内容を自動抽出し<br />
-                                <span className="text-indigo-600">スプレッドシートへ転記</span>
-                            </h3>
-
-                            <div className="space-y-4 mb-8">
-                                <div className="flex gap-4">
-                                    <span className="w-12 h-6 flex items-center justify-center rounded bg-red-50 text-red-600 text-xs font-bold shrink-0">課題</span>
-                                    <p className="text-sm text-slate-600">毎月100件以上のPDFを目視確認＆手入力。<br />ミス発生時の修正コストが重荷。</p>
-                                </div>
-                                <div className="flex gap-4">
-                                    <span className="w-12 h-6 flex items-center justify-center rounded bg-blue-50 text-blue-600 text-xs font-bold shrink-0">解決</span>
-                                    <p className="text-sm text-slate-600">AIがPDFを読み取り、整形データを提示。<br />人は「確認ボタンを押すだけ」に。</p>
-                                </div>
-                            </div>
-
-                            <div className="pt-6 border-t border-slate-100 mt-auto">
-                                <div className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Result</div>
-                                <div className="text-xl font-bold text-slate-900">
-                                    作業時間 <span className="text-indigo-600 text-2xl mx-1">80%</span> 削減 / ミスゼロへ
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Visual Side (Mockup) */}
-                        <div className="bg-slate-50 border-l border-slate-100 flex items-center justify-center p-12 relative overflow-hidden">
-                            {/* Decorative Circles */}
-                            <div className="absolute top-10 right-10 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-                            <div className="absolute bottom-10 left-10 w-32 h-32 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-
-                            <div className="relative z-10 w-full max-w-sm">
-                                {/* Card 1: PDF Input */}
-                                <div className="bg-white rounded-lg shadow-lg p-4 mb-4 border border-slate-100 transform -rotate-2 origin-bottom-left transition-transform group-hover:rotate-0">
-                                    <div className="flex items-center gap-3 mb-2 border-b border-slate-100 pb-2">
-                                        <FileText className="h-5 w-5 text-red-500" />
-                                        <span className="text-xs font-bold text-slate-600">invoice_A001.pdf</span>
-                                    </div>
-                                    <div className="space-y-2 opacity-50">
-                                        <div className="h-2 bg-slate-200 rounded w-3/4"></div>
-                                        <div className="h-2 bg-slate-200 rounded w-1/2"></div>
-                                    </div>
-                                </div>
-
-                                {/* Arrow */}
-                                <div className="flex justify-center -my-2 relative z-20 text-indigo-500">
-                                    <div className="bg-white rounded-full p-2 shadow-sm border border-slate-100">
-                                        <ArrowRight className="h-5 w-5 rotate-90" />
-                                    </div>
-                                </div>
-
-                                {/* Card 2: Sheet Output */}
-                                <div className="bg-white rounded-lg shadow-lg p-4 mt-2 border border-slate-100 border-l-4 border-l-green-500 transform rotate-2 origin-top-right transition-transform group-hover:rotate-0">
-                                    <div className="flex items-center gap-3 mb-2 border-b border-slate-100 pb-2">
-                                        <Table className="h-5 w-5 text-green-600" />
-                                        <span className="text-xs font-bold text-slate-600">管理台帳.xlsx</span>
-                                    </div>
-                                    <div className="space-y-2">
-                                        <div className="flex gap-2">
-                                            <div className="h-2 bg-indigo-100 rounded w-1/4"></div>
-                                            <div className="h-2 bg-green-50 rounded w-3/4"></div>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <div className="h-2 bg-indigo-100 rounded w-1/4"></div>
-                                            <div className="h-2 bg-green-50 rounded w-3/4"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <div className="text-center mb-20">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        「現場がどう変わるか」
+                    </h2>
+                    <p className="text-slate-600 font-medium">代表的な2つの改善事例です。</p>
                 </div>
 
-                {/* Supporting Cases Grid */}
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="space-y-16">
+                    {/* Case 1: 納品書 */}
                     <CaseCard
-                        title="マニュアル・FAQ生成"
-                        tag="社内標準化"
-                        desc="熟練者のチャット履歴やメモ書きから、誰でも読める標準手順書を生成。新人教育コストを削減。"
-                    />
+                        badge="経理・事務"
+                        title="納品書PDF抽出の自動化"
+                        beforeText="毎月100件のPDFを目視確認。ミスがあれば修正に1時間、心理的負担も大。"
+                        afterText="AIが項目を自動転記し、人は「最終確認ボタン」を押すだけ。ミスゼロへ。"
+                        metrics="作業時間 80% 削減"
+                    >
+                        {/* Visual representation: PDF -> Excel */}
+                        <div className="flex items-center justify-center gap-4 text-slate-400 py-8 bg-white rounded-lg border border-slate-200">
+                            <div className="text-center">
+                                <FileText className="h-10 w-10 mx-auto text-slate-300 mb-2" />
+                                <span className="text-xs font-bold">PDF</span>
+                            </div>
+                            <ArrowRight className="h-6 w-6 text-emerald-500" />
+                            <div className="text-center">
+                                <Upload className="h-10 w-10 mx-auto text-emerald-600 mb-2" />
+                                <span className="text-xs font-bold text-slate-900">自動入力</span>
+                            </div>
+                        </div>
+                    </CaseCard>
+
+                    {/* Case 2: AI知恵袋 */}
                     <CaseCard
-                        title="SNS等の下書き作成"
-                        tag="マーケティング"
-                        desc="箇条書きのアイデアから、3パターンの投稿文案を自動生成。人間は「選んで微調整」するだけに。"
-                    />
-                    <CaseCard
-                        title="日報・報告書の要約"
-                        tag="マネジメント"
-                        desc="現場から上がる大量の日報から「トラブル」や「重要な予兆」だけを抽出し、管理者の確認時間を短縮。"
-                    />
+                        badge="社内標準化"
+                        title="「あの人に聞かないと分からない」の解消"
+                        beforeText="熟練スタッフに質問が集中。退職すると業務が回らなくなるリスク。"
+                        afterText="過去のチャット・日報をAIに学習させ、24時間即答する「社内知恵袋」を構築。"
+                        metrics="新人教育コスト 50% 減"
+                    >
+                        {/* Visual representation: Chat bubbles */}
+                        <div className="p-6 bg-white rounded-lg border border-slate-200 space-y-3">
+                            <div className="flex gap-3 justify-end">
+                                <div className="bg-emerald-100 text-emerald-900 text-xs p-2 rounded-lg rounded-tr-none">
+                                    このエラーの対応方法は？
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <div className="bg-slate-100 text-slate-800 text-xs p-3 rounded-lg rounded-tl-none border border-slate-200 w-full">
+                                    <span className="font-bold block mb-1">AIアシスタント</span>
+                                    マニュアルP.12の手順に従ってください。それでも直らない場合は...
+                                </div>
+                            </div>
+                        </div>
+                    </CaseCard>
                 </div>
 
             </div>
@@ -122,16 +64,46 @@ export default function CaseStudies() {
     );
 }
 
-function CaseCard({ title, tag, desc }: { title: string, tag: string, desc: string }) {
+function CaseCard({ badge, title, beforeText, afterText, metrics, children }: { badge: string, title: string, beforeText: string, afterText: string, metrics: string, children: React.ReactNode }) {
     return (
-        <div className="p-6 rounded-2xl bg-slate-50 border border-transparent hover:border-slate-200 hover:bg-white hover:shadow-lg transition-all duration-300">
-            <span className="inline-block px-2 py-1 bg-white border border-slate-200 text-slate-500 text-[10px] font-bold rounded mb-4">
-                {tag}
-            </span>
-            <h4 className="text-lg font-bold text-slate-900 mb-3">{title}</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">
-                {desc}
-            </p>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden md:grid md:grid-cols-[1.2fr,0.8fr]">
+            <div className="p-8 md:p-12">
+                <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded mb-4">
+                    {badge}
+                </span>
+                <h3 className="text-2xl font-bold text-slate-900 mb-8">{title}</h3>
+
+                <div className="space-y-6">
+                    <div>
+                        <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Before</span>
+                        <p className="text-slate-600 leading-relaxed text-sm bg-slate-50 p-3 rounded border border-slate-100">
+                            {beforeText}
+                        </p>
+                    </div>
+                    <div className="relative">
+                        <div className="absolute -left-6 top-1/2 -translate-y-1/2 md:hidden">
+                            <ArrowRight className="h-5 w-5 text-emerald-500 rotate-90 mx-auto" />
+                        </div>
+                        <span className="block text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">After</span>
+                        <p className="text-slate-900 font-bold leading-relaxed text-lg">
+                            {afterText}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-slate-100">
+                    <div className="flex items-center gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-emerald-500" />
+                        <span className="font-bold text-slate-900">{metrics}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-slate-50 border-t md:border-t-0 md:border-l border-slate-100 flex items-center justify-center p-8">
+                <div className="w-full max-w-xs">
+                    {children}
+                </div>
+            </div>
         </div>
     );
 }

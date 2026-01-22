@@ -12,41 +12,24 @@ const config: Config = {
                 sans: ["var(--font-noto-sans-jp)", "var(--font-inter)", "sans-serif"],
             },
             colors: {
-                background: "hsl(var(--background))",
-                foreground: "hsl(var(--foreground))",
+                // Deep Navy for Trust (信頼)
                 primary: {
-                    DEFAULT: "hsl(var(--primary))",
-                    foreground: "hsl(var(--primary-foreground))",
+                    DEFAULT: "#0f172a", // Slate-900-like navy
+                    foreground: "#ffffff",
                 },
-                secondary: {
-                    DEFAULT: "hsl(var(--secondary))",
-                    foreground: "hsl(var(--secondary-foreground))",
-                },
-                muted: {
-                    DEFAULT: "hsl(var(--muted))",
-                    foreground: "hsl(var(--muted-foreground))",
-                },
+                // Deep Green for Solution/Accent (解決・安心)
                 accent: {
-                    DEFAULT: "hsl(var(--accent))",
-                    foreground: "hsl(var(--accent-foreground))",
+                    DEFAULT: "#059669", // Emerald-600
+                    foreground: "#ffffff",
+                },
+                background: "#f8fafc", // Slate-50 (Clean white-grey)
+                foreground: "#0f172a", // Text color
+                muted: {
+                    DEFAULT: "#f1f5f9", // Slate-100
+                    foreground: "#64748b", // Slate-500
                 },
             },
-            animation: {
-                blob: "blob 7s infinite",
-                "fade-in-up": "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-            },
-            keyframes: {
-                blob: {
-                    "0%": { transform: "translate(0px, 0px) scale(1)" },
-                    "33%": { transform: "translate(30px, -50px) scale(1.1)" },
-                    "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
-                    "100%": { transform: "translate(0px, 0px) scale(1)" },
-                },
-                fadeInUp: {
-                    "from": { opacity: "0", transform: "translateY(20px)" },
-                    "to": { opacity: "1", transform: "translateY(0)" },
-                },
-            },
+            // Remove fancy animations, keep it solid
         },
     },
     plugins: [],
