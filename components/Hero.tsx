@@ -36,7 +36,7 @@ export default function Hero() {
 
                         <div className="relative w-80 h-96 md:w-96 md:h-[500px] rounded-2xl bg-slate-100 shadow-2xl flex items-center justify-center overflow-hidden border-8 border-white rotate-3 hover:rotate-0 transition-transform duration-700">
                             <Image
-                                src={`${process.env.BASE_PATH || ""}/profile.jpg`}
+                                src="/profile.jpg"
                                 alt="Seiya Watanabe"
                                 fill
                                 className="object-cover object-top"

@@ -13,7 +13,7 @@ export default function Profile() {
                     <div className="shrink-0 flex flex-col items-center mx-auto md:mx-0">
                         <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-sm bg-slate-200 shadow-2xl overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white ring-1 ring-slate-100">
                             <Image
-                                src={`${process.env.BASE_PATH || ""}/profile.jpg`}
+                                src="/profile.jpg"
                                 alt="Seiya Watanabe"
                                 fill
                                 className="object-cover object-top"

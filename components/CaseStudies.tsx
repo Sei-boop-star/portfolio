@@ -1,4 +1,5 @@
 import { FileJson, MessageCircle, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function CaseStudies() {
     return (
@@ -43,10 +44,12 @@ export default function CaseStudies() {
                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {[1, 2, 3, 4].map((num) => (
                                 <div key={num} className="relative aspect-[16/9] w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
-                                    <img
-                                        src={`${process.env.BASE_PATH || ""}/case-slide-${num}.jpg`}
+                                    <Image
+                                        src={`/case-slide-${num}.jpg`}
                                         alt={`AI知恵袋スライド ${num}`}
-                                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                                        fill
+                                        className="object-cover hover:scale-105 transition-transform duration-500"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                             ))}
