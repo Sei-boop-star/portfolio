@@ -30,21 +30,20 @@ export default function Profile() {
                         </h2>
                         <p className="text-slate-800 font-bold mb-10 text-xl leading-relaxed border-l-4 border-slate-900 pl-4 py-1">
                             「ITコンサル」ではありません。<br />
-                            現場の言葉をシステムにつなぐ「翻訳者」です。
+                            現場の熱量を、確かな“回る形”につなぐ翻訳者です。
                         </p>
 
                         <div className="space-y-8 text-slate-600 leading-loose text-justify md:text-left font-medium">
                             <p>
-                                浜松市を拠点に、実店舗3拠点を運営する企業の「実務責任者」として、日々現場のトラブル対応やスタッフ教育を行いながら、自らAI実装を行っています。
+                                中小企業の現場側で、接客・運営・教育・トラブル対応の最前線に立ちながら、業務の整備と改善を進めてきました。
                             </p>
                             <p>
-                                机上の空論は大嫌いです。<br />
-                                大手食品メーカーでの12年間の品質管理経験で培った「泥臭い改善」と、現在の店舗運営で得ている「生きたフィードバック」が私の武器です。
+                                前職では大手メーカーで12年間、品質管理に従事。曖昧な情報を「誰でも同じ判断ができる形」に整える仕事を続けてきました。
                             </p>
                             <div className="bg-slate-50 p-6 rounded-none border-l-2 border-slate-300 text-sm leading-relaxed">
                                 <span className="font-bold block mb-2 text-slate-900 text-base">大切にしていること</span>
-                                「綺麗なシステム」より「現場が使い倒せる道具」を。<br />
-                                スタッフが説明書なしで使えるレベルになるまで、徹底的に現場に寄り添います。
+                                「きれいな仕組み」より、「現場が使い倒せる道具」を。<br />
+                                負担が減るだけでなく、確認ポイントが見える形を一緒に作ります。
                             </div>
                         </div>
                     </div>

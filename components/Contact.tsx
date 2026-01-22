@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -13,24 +13,33 @@ export default function Contact() {
                     <div className="absolute top-0 left-0 w-1 h-full bg-slate-300"></div>
                     <p className="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
                         <span className="text-xl">🤔</span>
-                        何を書けばいいか迷っている方へ
+                        まずは状況だけで大丈夫です（こういう方へ）
                     </p>
                     <ul className="text-slate-600 space-y-3 text-sm font-medium">
                         <li className="flex items-start gap-3">
                             <span className="text-emerald-500 mt-1">●</span>
-                            「スタッフに何度も同じことを聞かれるのをやめたい」
+                            問い合わせ返信を毎回作るのがつらい
                         </li>
                         <li className="flex items-start gap-3">
                             <span className="text-emerald-500 mt-1">●</span>
-                            「自分の『こだわり』を、AIを使って正しく伝えたい」
+                            同じ質問が何度も来て、現場が止まる
                         </li>
                         <li className="flex items-start gap-3">
                             <span className="text-emerald-500 mt-1">●</span>
-                            「とにかく今の忙しさを、AIという道具で少しでも軽くしたい」
+                            日報・引き継ぎが続かず、毎回やり直しになる
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-emerald-500 mt-1">●</span>
+                            マニュアルを作る時間がない
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-emerald-500 mt-1">●</span>
+                            口頭指示が伝わらず、聞き直しが増えている
                         </li>
                     </ul>
-                    <p className="mt-6 text-xs text-slate-400 border-t border-slate-200 pt-4">
-                        ※まとまっていなくて大丈夫です。そのままお書きください。
+                    <p className="mt-6 text-xs text-slate-400 border-t border-slate-200 pt-4 leading-relaxed">
+                        ※箇条書きでOKです。まとまっていなくて大丈夫です。<br />
+                        無理な売り込みはしません。まずは雑談ベースで状況を聞かせてください。
                     </p>
                 </div>
 
@@ -40,12 +49,11 @@ export default function Contact() {
                     className="inline-flex h-16 w-full sm:w-auto items-center justify-center rounded bg-slate-900 px-8 text-lg font-bold text-white shadow-lg transition-transform hover:-translate-y-1 hover:bg-slate-800"
                 >
                     <MessageSquare className="mr-3 h-5 w-5" />
-                    まずは雑談ベースで相談する
+                    雑談ベースで相談する
                     <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
 
                 <p className="mt-8 text-sm text-slate-500">
-                    無理な売り込みは一切いたしません。<br />
                     Googleフォームへ移動します。
                 </p>
             </div>

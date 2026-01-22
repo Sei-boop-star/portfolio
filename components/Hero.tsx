@@ -13,20 +13,18 @@ export default function Hero() {
                         <div className="space-y-8">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug tracking-tight text-slate-900">
                                 「社長の頭の中」を、<br />
-                                現場が迷わず動ける<br className="md:hidden" />
+                                現場が迷いにくくなる<br className="md:hidden" />
                                 <span className="relative whitespace-nowrap inline-block px-1 ml-1">
                                     <span className="absolute inset-0 bg-slate-200/50 -skew-y-2 rounded-sm -z-10"></span>
-                                    「仕組み」
+                                    “指示・手順・型”
                                 </span>
-                                に変える。
+                                に変えます。
                             </h1>
                             <p className="text-lg text-slate-600 leading-loose font-medium">
-                                12年の品質管理経験が、<br className="md:hidden" />
-                                「AIの嘘」を実務に耐える「確信」に変えます。
+                                12年の品質管理経験で、<br className="md:hidden" />
+                                AIの下書きを「実務で回る運用」に整えます。
                             </p>
                         </div>
-
-
                     </div>
 
                     {/* Photo Column */}
@@ -50,30 +48,30 @@ export default function Hero() {
                 <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-slate-900/5 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-200 opacity-30"></div>
                     <p className="text-center md:text-left font-bold text-slate-800 mb-10 text-xl tracking-wide leading-relaxed">
-                        ITの専門用語は使いません。AIに丸投げもさせません。<br className="hidden md:block" />
-                        最終判断は「人」が行う、確実な運用を設計します。
+                        難しいIT用語は使いません。AIに任せきりにもしません。<br className="hidden md:block" />
+                        AIは下書き、最終確定は人。迷うところは<span className="bg-yellow-100 px-1 mx-1 rounded border-b-2 border-yellow-200">「要確認」で止める</span>流れまで設計します。
                     </p>
                     <ul className="grid gap-8 md:grid-cols-3">
                         {[
                             {
-                                title: "難解なIT用語は\n一切使いません",
-                                icon: "言葉の壁をなくす"
+                                title: "1）現場の言葉で整える",
+                                desc: "言い回しをそろえ、スタッフがそのまま使える形にします。説明が増えない書き方にします。"
                             },
                             {
-                                title: "AI任せにせず\n「人」の確認を重視",
-                                icon: "品質を守る"
+                                title: "2）要確認で止める\n（品質を守る）",
+                                desc: "AIの出力はそのまま通しません。「確定していいもの／止めるもの」を分け、確認ポイントが残る形にします。"
                             },
                             {
-                                title: "現場が迷わない\n手順書まで作成",
-                                icon: "明日から動ける"
+                                title: "3）作って終わりにしない\n（定着まで）",
+                                desc: "仕組みだけ渡して終わりにしません。説明書なしで回る手順（誰が／いつ／何を／どこで止めるか）まで整えます。"
                             }
                         ].map((item, i) => (
                             <li key={i} className="flex flex-col items-center md:items-start text-center md:text-left group">
                                 <div className="mb-4 p-3 bg-slate-50 rounded-2xl text-slate-700 ring-1 ring-slate-200 group-hover:bg-slate-100 transition-colors">
                                     <CheckCircle2 className="w-6 h-6" />
                                 </div>
-                                <h3 className="font-bold text-slate-800 text-lg whitespace-pre-line mb-2 leading-relaxed">{item.title}</h3>
-                                <p className="text-sm text-slate-500 font-medium bg-slate-100 px-3 py-1 rounded-full inline-block">{item.icon}</p>
+                                <h3 className="font-bold text-slate-800 text-lg whitespace-pre-line mb-3 leading-relaxed">{item.title}</h3>
+                                <p className="text-sm text-slate-600 font-medium leading-relaxed">{item.desc}</p>
                             </li>
                         ))}
                     </ul>
